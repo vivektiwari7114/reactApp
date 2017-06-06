@@ -5,14 +5,26 @@ import Footer from './footer.js';
 import App from './app.js';
 
 class Layout extends Component {
+
+  constructor(){
+    super();
+    this.state = {
+      title: "Welcome To Header"
+    };
+  }
+
+  changeTitle(title){
+    this.setState({title});
+  }
+
   
+
   render() {
     return (
       <div >
-      	<Header />
+      	<Header  changeTitle = {this.changeTitle.bind(this)}  title = {this.state.title}/>
        	<App />
-       	<Footer title= {"Welcome to ABC..."} />
-       	<Footer title= {"Welcome to XYZ.."} />
+       	<Footer />
       </div>
     );
   }

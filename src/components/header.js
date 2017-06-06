@@ -4,19 +4,16 @@ import '../stylesheets/header.css';
 
 class Header extends Component {
 
-  constructor() {
-  	super();
-  	this.state = {name: "This is Header"};
+  handleChange(e){
+    const newTitle = e.target.value;
+    this.props.changeTitle(newTitle);
   }
-  
-  render() {
-  	setTimeout(() => {
-  		this.setState({name : "Header got changed"});
 
-  	},1000)
+  render() {
     return (
     	<div>
-       		<span> {this.state.name}</span>
+       		<span> {this.props.title}</span>
+          <input onChange = {this.handleChange.bind(this)}/>
        	</div>
       
     );

@@ -7,7 +7,7 @@ class Footer extends Component {
   render() {
     return (
     	<div>
-       		<span> {this.props.title} </span>
+       		<span> "This is Footer" </span>
        	</div>
     );
   }
