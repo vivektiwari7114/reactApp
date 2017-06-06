@@ -12,7 +12,7 @@ class Layout extends Component {
       	<Header />
        	<App />
        	<Footer title= {"Welcome to ABC..."} />
-       	<Footer title= {"Welcome to XYZ..."} />
+       	<Footer title= {"Welcome to XYZ.."} />
       </div>
     );
   }
