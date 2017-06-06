@@ -11,7 +11,8 @@ class Layout extends Component {
       <div >
       	<Header />
        	<App />
-       	<Footer />
+       	<Footer title= {"Welcome to ABC..."} />
+       	<Footer title= {"Welcome to XYZ..."} />
       </div>
     );
   }
