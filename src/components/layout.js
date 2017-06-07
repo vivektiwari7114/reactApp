@@ -9,22 +9,24 @@ class Layout extends Component {
   constructor(){
     super();
     this.state = {
-      title: "Welcome To Header"
+      headerTitle: "Welcome To Header",
+      footerTitle: " Welcome to Footer"
     };
   }
 
-  changeTitle(title){
-    this.setState({title});
+  changeHeaderTitle(title){
+    this.setState({headerTitle: title});
   }
-
+  changeFooterTitle(footTitle){
+    this.setState({footerTitle: footTitle});
+  }
   
-
   render() {
     return (
       <div >
-      	<Header  changeTitle = {this.changeTitle.bind(this)}  title = {this.state.title}/>
+      	<Header  changeHeaderTitle = {this.changeHeaderTitle.bind(this)}  title = {this.state.headerTitle}/>
        	<App />
-       	<Footer />
+       	<Footer  changeFooterTitle = {this.changeFooterTitle.bind(this)}  title = {this.state.footerTitle} />
       </div>
     );
   }

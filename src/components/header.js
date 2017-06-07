@@ -4,16 +4,16 @@ import '../stylesheets/header.css';
 
 class Header extends Component {
 
-  handleChange(e){
+  changeHeader(e){
     const newTitle = e.target.value;
-    this.props.changeTitle(newTitle);
+    this.props.changeHeaderTitle(newTitle);
   }
 
   render() {
     return (
     	<div>
-       		<span> {this.props.title}</span>
-          <input onChange = {this.handleChange.bind(this)}/>
+       		<div> {this.props.title}</div>
+          <input value = {this.props.title} onChange = {this.changeHeader.bind(this)}/>
        	</div>
       
     );
